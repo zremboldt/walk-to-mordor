@@ -5,6 +5,9 @@
   import mapImgJpg from '$lib/images/map.jpg'
   import mapImgAvif from '$lib/images/map.avif'
 
+  // const TOTAL_DISTANCE = 282;
+  const TOTAL_DISTANCE = 1718;
+
   let dailyStats = $state([]);
   let distanceTraveled = $state(0);
   let loading = $state(true);
@@ -12,8 +15,6 @@
 
   let frodoPath = $state(null);
   let marker = $state(null);
-  // const totalDistance = 282;
-  const totalDistance = 1718;
 
   // Create a tweened store for the animation
   const animatedDistance = tweened(0, {
@@ -56,7 +57,7 @@
     if (!frodoPath || !marker) return;
     
     const svgPathLength = frodoPath.getTotalLength();
-    const markerPosition = frodoPath.getPointAtLength((svgPathLength * currentDistance) / totalDistance);
+    const markerPosition = frodoPath.getPointAtLength((svgPathLength * currentDistance) / TOTAL_DISTANCE);
     marker.setAttribute(
       "transform",
       `translate(${markerPosition.x - 431} ${markerPosition.y - 318})`
@@ -87,11 +88,11 @@
         <span>Start date:</span>
         <strong>{prettyPrintDate(dailyStats[0].date)}</strong>
         <span>Miles total:</span>
-        <strong>{totalDistance}</strong>
+        <strong>{TOTAL_DISTANCE}</strong>
         <span>Miles traveled:</span>
         <strong>{distanceTraveled}</strong>
         <span>Miles remaining:</span>
-        <strong>{totalDistance - distanceTraveled}</strong>
+        <strong>{TOTAL_DISTANCE - distanceTraveled}</strong>
       {/if}
     </div>
 
