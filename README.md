@@ -1,4 +1,5 @@
-![app-screenshot](./related-screenshots/Screenshot%202024-10-06%20at%202.29.31%20PM.jpg)
+![app-screenshot](./related-screenshots/Screenshot_2024-10-06.avif)
+![app-screenshot](./related-screenshots/Screenshot_2024-10-06.webp)
 
 # create-svelte
 
