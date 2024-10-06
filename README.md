@@ -1,5 +1,4 @@
 ![app-screenshot](./related-screenshots/Screenshot_2024-10-06.avif)
-![app-screenshot](./related-screenshots/Screenshot_2024-10-06.webp)
 
 # create-svelte
 
